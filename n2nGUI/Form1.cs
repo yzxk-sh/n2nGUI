@@ -1,13 +1,4 @@
 ﻿using System;
-/*
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-*/
 using System.Windows.Forms;
 using System.Diagnostics;
 
@@ -23,25 +14,19 @@ namespace n2nGUI
             int x = (SystemInformation.WorkingArea.Width - this.Size.Width) / 2;
             int y = (SystemInformation.WorkingArea.Height - this.Size.Height) / 2;
             InitializeComponent();
-            //this.StartPosition = FormStartPosition.Manual;
-            //this.Location = (Point)new Size(x, y);
         }
 
         private void OK_Click(object sender, EventArgs e)
         {
-            string serverAdd, serverPort, edgeAdd, edgeGroup, edgePasswd;
+            string serverAdd, serverPort, edgeAdd, edgeGroup, edgePasswd, para, path;
             serverAdd = supernodeAddEdit.Text;
             serverPort = supernodePortEdit.Text;
             edgeAdd = ipSet.Text;
             edgeGroup = group.Text;
             edgePasswd = password.Text;
 
-            string para = " -a " + edgeAdd + " -c " + edgeGroup + " -k " + edgePasswd + " -l " + serverAdd + ":" + serverPort;
-            string path = System.Environment.CurrentDirectory;
-            //          Process myProcess = Process.Start("D:/kyle/Downloads/n2n/win32/DotNet/Release/edge.exe", para);        
-            //Process myProcess = Process.Start(path + "/edge.exe", para);
-            //processID = myProcess.Id;
-            //Console.WriteLine(path);
+            para = " -a " + edgeAdd + " -c " + edgeGroup + " -k " + edgePasswd + " -l " + serverAdd + ":" + serverPort + " " + Form2.paraInForm2;
+            path = System.Environment.CurrentDirectory;
 
             ProcessStartInfo Info = new ProcessStartInfo
             {
@@ -101,6 +86,14 @@ namespace n2nGUI
                 Abort_Click(null, null);
             }
             Application.Exit();
+        }
+
+
+        private void Advance_Click(object sender, EventArgs e)
+        {
+            Form2 form2 = new Form2();
+            form2.ShowDialog();
+            this.Hide();
         }
     }
 }

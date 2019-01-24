@@ -49,10 +49,11 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.OK = new System.Windows.Forms.Button();
-            this.Abort = new System.Windows.Forms.Button();
+            this.Advance = new System.Windows.Forms.Button();
             this.notifyIcon = new System.Windows.Forms.NotifyIcon(this.components);
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.ExitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.Abort = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -244,15 +245,15 @@
             this.OK.UseVisualStyleBackColor = true;
             this.OK.Click += new System.EventHandler(this.OK_Click);
             // 
-            // Abort
+            // Advance
             // 
-            this.Abort.Location = new System.Drawing.Point(136, 270);
-            this.Abort.Name = "Abort";
-            this.Abort.Size = new System.Drawing.Size(40, 24);
-            this.Abort.TabIndex = 8;
-            this.Abort.Text = "中止";
-            this.Abort.UseVisualStyleBackColor = true;
-            this.Abort.Click += new System.EventHandler(this.Abort_Click);
+            this.Advance.Location = new System.Drawing.Point(142, 270);
+            this.Advance.Name = "Advance";
+            this.Advance.Size = new System.Drawing.Size(40, 24);
+            this.Advance.TabIndex = 8;
+            this.Advance.Text = "选项";
+            this.Advance.UseVisualStyleBackColor = true;
+            this.Advance.Click += new System.EventHandler(this.Advance_Click);
             // 
             // notifyIcon
             // 
@@ -275,12 +276,23 @@
             this.ExitToolStripMenuItem.Text = "退出";
             this.ExitToolStripMenuItem.Click += new System.EventHandler(this.ExitToolStripMenuItem_Click);
             // 
+            // Abort
+            // 
+            this.Abort.Location = new System.Drawing.Point(92, 270);
+            this.Abort.Name = "Abort";
+            this.Abort.Size = new System.Drawing.Size(40, 24);
+            this.Abort.TabIndex = 9;
+            this.Abort.Text = "中止";
+            this.Abort.UseVisualStyleBackColor = true;
+            this.Abort.Click += new System.EventHandler(this.Abort_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(226, 301);
             this.Controls.Add(this.Abort);
+            this.Controls.Add(this.Advance);
             this.Controls.Add(this.OK);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.label1);
@@ -325,10 +337,11 @@
         private System.Windows.Forms.TextBox password;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Button OK;
-        private System.Windows.Forms.Button Abort;
+        private System.Windows.Forms.Button Advance;
         private System.Windows.Forms.NotifyIcon notifyIcon;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem ExitToolStripMenuItem;
+        private System.Windows.Forms.Button Abort;
     }
 }
 
